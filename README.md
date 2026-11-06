@@ -69,15 +69,3 @@ sam@hpserver:~/cliproject$ python3 samlite_v6.py 'command to start a docker cont
 ```
 
 [] weird behavior when ask "command to move to different directory"
-
-[x] ts too short
-```bash
-sam@hpserver:~/cliproject$ python3 samlite_v6.py 'command to start a docker container and update and upgrade debian'
-Traceback (most recent call last):
-  File "/home/sam/cliproject/samlite_v6.py", line 228, in <module>
-    print(border(answer))
-          ~~~~~~^^^^^^^^
-  File "/home/sam/cliproject/samlite_v6.py", line 206, in border
-    actually_wo = text_wo_command[1]
-                  ~~~~~~~~~~~~~~~^^^
-```
