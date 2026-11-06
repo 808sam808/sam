@@ -1,0 +1,7 @@
+{
+  "API key": "null",
+  "API provider": "Groq",
+  "API endpoint": "https://api.groq.com/openai/v1/chat/completions",
+  "LLM Model": "openai/gpt-oss-120b",
+  "API key name": "GROQ_API_KEY"
+}
