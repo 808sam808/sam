@@ -1,10 +1,11 @@
-# (WIP) Command Line Helper
-A super simple command line tool which lets you ask an llm questions. Each question uses only one llm api request. A single python script with no external libraries. Currently the tool is still a work in progress, so there are few features and there may be bugs.
-The tool should support any openai api endpoint (I use groq with gpt-oss-120b). Currently you need to paste your api key and endpoint yourself.  
+# Sam 
+Sam is a simple command line tool which lets you ask an llm questions. The cli tool aims to be as minimal as possible; it only requires python to work, and there are no external libraries. Currently the tool is still a work in progress, so there are few features and there may be bugs.
+The tool should support any openai api endpoint (I use groq with gpt-oss-120b). 
 
 ## Installation
+**Linux**
 ```bash
-# Note: On first launch the script will create the config.json file in the same directory
+# Install for all users
 mkdir ./sam
 cd sam
 curl scriptlocation.com
