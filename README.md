@@ -23,27 +23,27 @@ sam --config
 
 ## To-do
 ~~[] Bash script for installation~~
-[x] migrate from requests library
-[x] Store API key as env variable and have script access it
-[x] Have script using environment variables from config.json
-  [x] Have script check for existence of config.json
-[x] Configuration via command line
-  [x] Create the `--config` flag
-  [x] write changes to config.json
-[] help command
-[] Update status command
-[] Support other api keys
-  [x] Groq
-  [x] OpenRouter
-  [] OpenAI
-  [] Claude
-  [] Other
-[] Exception handling
-[] Write install instructions for linux + macos
-[] Add a loading bar/spinner
-[x] **Replacing placeholders in commands**
-[] **Way to continue conversation**
-[] Aesthetics
+- [x] migrate from requests library
+- [x] Store API key as env variable and have script access it
+- [x] Have script using environment variables from config.json
+  - [x] Have script check for existence of config.json
+- [x] Configuration via command line
+  - [x] Create the `--config` flag
+  - [x] write changes to config.json
+- [ ] help command
+- [ ] Update status command
+- [ ] Support other api keys
+  - [x] Groq
+  - [x] OpenRouter
+  - [] OpenAI
+  - [] Claude
+  - [] Other
+- [ ] Exception handling
+- [ ] Write install instructions for linux + macos
+- [ ] Add a loading bar/spinner
+- [x] **Replacing placeholders in commands**
+- [ ] **Way to continue conversation**
+- [ ] Aesthetics
 
 ## Bugs
 [x] Border does not render
