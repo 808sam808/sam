@@ -14,15 +14,15 @@ sudo ln -s /opt/sam/sam /usr/local/bin/sam
 
 ## Usage
 ```bash
-# Asking a question
-sam 'your question here'
-
 # Configuration
 sam --config
+
+# Asking a question
+sam 'your question here'
 ```
 
 ## To-do
-- ~~[] Bash script for installation~~
+- ~~[ ] Bash script for installation~~
 - [x] migrate from requests library
 - [x] Store API key as env variable and have script access it
 - [x] Have script using environment variables from config.json
