@@ -3,13 +3,13 @@ Sam is a simple command line tool which lets you ask an llm questions. The cli t
 The tool should support any openai api endpoint (I use groq with gpt-oss-120b). 
 
 ## Installation
-**Linux**
+**Linux/MacOS**
 ```bash
 # Install for all users
-mkdir ./sam
-cd sam
-curl scriptlocation.com
-symlink to executable directory
+sudo mkdir /opt/sam
+sudo curl -L -o /opt/sam/sam "https://raw.githubusercontent.com/808sam808/sam/refs/heads/main/sam.py"
+sudo chmod +x /opt/sam/sam
+sudo ln -s /opt/sam/sam /usr/local/bin/sam
 ```
 
 ## Usage
