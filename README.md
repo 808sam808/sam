@@ -10,7 +10,7 @@ The tool should support any openai api endpoint (I use groq with gpt-oss-120b).
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="sam6_dark.gif">
   <source media="(prefers-color-scheme: light)" srcset="sam6.gif">
-  <img width="1200" alt="A demo gif" src="sam6.gif">
+  <img width="600" alt="A demo gif" src="sam6.gif">
 </picture>
 
 ## Installation
