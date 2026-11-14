@@ -10,17 +10,22 @@ import sys
 from pathlib import Path
 
 # check if config.json exists
+
+config_path = Path("~/.config/sam/config.json").expanduser()
+
 try:
-    with open("config.json", "x") as file:
+    with open(config_path, "x") as file:
         file.write("{}")
         print('config.json does not exist. Creating file now.')
-        # sys.exit()
+except FileNotFoundError:
+    print('The directory ~/.config/sam does not exist. Please make it yourself. mkdir ~/.config ~/.config/sam')
+    sys.exit()
 except FileExistsError:
     pass
 
 
 # open config.json
-with open("config.json", "r") as file:
+with open(config_path, "r") as file:
     loaded_config = json.load(file)
 
 
@@ -131,7 +136,7 @@ if args.config:
         "LLM Model": f"{model}",
         "API key name": f"{api_key_name}"
     }
-    with open("config.json","w")as file:
+    with open(config_path,"w")as file:
         json.dump(config, file, indent=2)
     print('''
 Configuration saved :)''')

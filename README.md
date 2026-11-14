@@ -11,10 +11,9 @@ The tool should support any openai api endpoint (I use groq with gpt-oss-120b).
 **Linux/MacOS**
 ```bash
 # Install for all users
-sudo mkdir /opt/sam
-sudo curl -L -o /opt/sam/sam "https://raw.githubusercontent.com/808sam808/sam/refs/heads/main/sam.py"
-sudo chmod +x /opt/sam/sam
-sudo ln -s /opt/sam/sam /usr/local/bin/sam
+mkdir ~/.config ~/.config/sam
+sudo curl -L -o /usr/local/bin/sam "https://raw.githubusercontent.com/808sam808/sam/refs/heads/main/sam.py"
+sudo chmod +x /usr/local/bin/sam
 ```
 
 ## Usage
@@ -24,10 +23,12 @@ sam --config
 
 # Asking a question
 sam 'your question here'
+
+# Check Configuration
+sam --status
 ```
 
 ## To-do
-- ~~[ ] Bash script for installation~~
 - [x] migrate from requests library
 - [x] Store API key as env variable and have script access it
 - [x] Have script using environment variables from config.json
