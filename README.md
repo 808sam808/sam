@@ -15,6 +15,12 @@ The tool should support any openai api endpoint (I use groq with gpt-oss-120b).
 
 ## Installation
 **Linux/MacOS**
+1. Make sure python is installed
+```bash
+python3 --version
+```
+
+2. Install
 ```bash
 # Install for all users
 mkdir ~/.config ~/.config/sam
