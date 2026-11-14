@@ -7,6 +7,12 @@
 Sam is a simple command line tool which lets you ask an llm questions. The cli tool aims to be as minimal as possible; it only requires python to work, and there are no external libraries. Currently the tool is still a work in progress, so there are few features and there may be bugs.
 The tool should support any openai api endpoint (I use groq with gpt-oss-120b). 
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="sam6_dark.gif">
+  <source media="(prefers-color-scheme: light)" srcset="sam6.gif">
+  <img width="1200" alt="A demo gif" src="sam6.gif">
+</picture>
+
 ## Installation
 **Linux/MacOS**
 ```bash
