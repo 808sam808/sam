@@ -61,6 +61,7 @@ args = parser.parse_args()
 
 
 if args.config:
+    manual_mode = 0
     print('Hello!')
     print('''Select an API provider
 
@@ -86,10 +87,12 @@ if args.config:
         api_endpoint="https://api.openai.com/v1/chat/completions"
         api_key_name = "OPENAI_API_KEY"
     if api_provider == 4:
+        manual_mode = 1
         print('Okay, as long as your api is openai compatible it should work. You will input the provider name, api endpoint, and model manually.')
         provider = input('Provider: ')
         api_endpoint = input('API endpoint: ')
         model = input('Model: ')
+        api_key_name = 'Manual'
 
     print()
     print('Do you want to store API key in config.json or as an environmental variable?')
@@ -110,24 +113,26 @@ if args.config:
         print('that shit is not the letter C or E')
         sys.exit()
 
-    print(f'{provider} selected. Would you like to see available llms from {provider}? ')
-    y_or_n = input('(y/n): ')
-    if y_or_n == 'y':
-        chud = model_scanner(model_list, temp_api_key)
-        # response = requests.get(f'{model_list}', headers=headers)
-        # r_d = (json.loads(response.text))["data"]
-        # chud = [model["id"] for model in r_d if "id" in model]
-        x = 0
-        for model in chud:
-            x = x+1
-            print(f'({x}) ', model)
-        number_selected = input('Okay, what model do you want to use? (choose number): ')
-        model = chud[int(number_selected) - 1]
-        print(f'{model} selected!')
-    elif y_or_n == 'n':
-        model = input('Okay, what model do you want to use?: ')
-    else:
-        print('Error! enter y or n')
+    if manual_mode == 0:
+        print(f'{provider} selected. Would you like to see available llms from {provider}? ')
+        y_or_n = input('(y/n): ')
+        if y_or_n == 'y':
+            chud = model_scanner(model_list, temp_api_key)
+            # response = requests.get(f'{model_list}', headers=headers)
+            # r_d = (json.loads(response.text))["data"]
+            # chud = [model["id"] for model in r_d if "id" in model]
+            x = 0
+            for model in chud:
+                x = x+1
+                print(f'({x}) ', model)
+            number_selected = input('Okay, what model do you want to use? (choose number): ')
+            model = chud[int(number_selected) - 1]
+            print(f'{model} selected!')
+        elif y_or_n == 'n':
+            model = input('Okay, what model do you want to use?: ')
+        else:
+            print('Error! enter y or n')
+
 
     config = {
         "API key": f"{api_key}",
