@@ -48,8 +48,8 @@ sam --status
 - [x] Configuration via command line
   - [x] Create the `--config` flag
   - [x] write changes to config.json
-- [ ] help command
-- [ ] Update status command
+- [x] help command
+- [x] Update status command
 - [ ] Support other api keys
   - [x] Groq
   - [x] OpenRouter
@@ -57,7 +57,7 @@ sam --status
   - [ ] Claude
   - [ ] Other
 - [ ] Exception handling
-- [ ] Write install instructions for linux + macos
+- [x] Write install instructions for linux + macos
 - [ ] Add a loading bar/spinner
 - [x] **Replacing placeholders in commands**
 - [ ] **Way to continue conversation**

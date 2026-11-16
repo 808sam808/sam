@@ -51,9 +51,9 @@ def model_scanner(provider_model_list, temp_api_key):
 parser = argparse.ArgumentParser()
 
 
-parser.add_argument("user_question", nargs="?")
-parser.add_argument("--config", action="store_true")
-parser.add_argument("--status", action="store_true")
+parser.add_argument("user_question", nargs="?", help="put your question after the command sam inside of ' ' ")
+parser.add_argument("--config", action="store_true", help="configure sam (choose provider, model, API key)")
+parser.add_argument("--status", action="store_true", help="show what model and provider are selected")
 
 args = parser.parse_args()
 
